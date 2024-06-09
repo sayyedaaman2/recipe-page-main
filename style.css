@@ -1,0 +1,342 @@
+/* ------------------ */
+/* Custom Font Families  */
+/* ---------------- */
+@font-face {
+    font-family: "Young Serif";
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+/* ------------------ */
+/* Custom Propeties */
+/* ---------------- */
+
+:root {
+    /* Colors  */
+    /* Primary  */
+    --clr-nutmeg: 14, 45%, 36%;
+    --clr-dark-rasberry: 332, 51%, 32%;
+    /* Neutral */
+
+    --clr-white: 0, 0%, 100%;
+    --clr-rose-white: 330, 100%, 98%;
+    --clr-eggshell: 30, 54%, 90%;
+    --clr-light-gray: 30, 18%, 87%;
+    --clr-wenge-brown: 30, 10%, 34%;
+    --clr-dark-charcoal: 24, 5%, 18%;
+
+    /* Font-familes */
+
+    --ff-serif: 'Young Serif', 'serif';
+    --ff-outfit: 'Outfit', 'serif';
+
+
+    /* Typograph */
+
+    --fs-300: 1rem;
+    --fs-400: 1.25rem;
+    --fs-500: 1.5rem;
+    --fs-600: 1.75rem;
+}
+
+/* ------------------ */
+/* Utilites Classes  */
+/* ---------------- */
+
+.bg-nutmeg {
+    background-color: hsl(var(--clr-nutmeg));
+}
+
+.bg-dark-rasberry {
+    background-color: hsl(var(--clr-dark-rasberry));
+}
+
+.bg-white {
+    background-color: hsl(var(--clr-white));
+}
+
+.bg-rose-white {
+    background-color: hsl(var(--clr-rose-white));
+}
+
+.bg-eggshell {
+    background-color: hsl(var(--clr-eggshell));
+}
+
+.bg-light-gray {
+    background-color: hsl(var(--clr-light-gray));
+}
+
+.bg-wenge-brown {
+    background-color: hsl(var(--clr-wenge-brown));
+}
+
+.bg-dark-charcoal {
+    background-color: hsl(var(--clr-dark-charcoal));
+}
+
+
+.text-nutmeg {
+    color: hsl(var(--clr-nutmeg));
+}
+
+.text-dark-rasberry {
+    color: hsl(var(--clr-dark-rasberry));
+}
+
+.text-white {
+    color: hsl(var(--clr-white));
+}
+
+.text-rose-white {
+    color: hsl(var(--clr-rose-white));
+}
+
+.text-eggshell {
+    color: hsl(var(--clr-eggshell));
+}
+
+.text-light-gray {
+    color: hsl(var(--clr-light-gray));
+}
+
+.text-wenge-brown {
+    color: hsl(var(--clr-wenge-brown));
+}
+
+.text-dark-charcoal {
+    color: hsl(var(--clr-dark-charcoal));
+}
+
+
+.ff-serif{
+    font-family: var(--ff-serif);
+}
+
+.ff-outfit{
+    font-family: var(--ff-outfit);
+}
+
+.fs-300{
+    font-size: var(--fs-300);
+}
+
+.fs-400{
+    font-size : var(--fs-400);
+}
+.fs-500{
+    font-size : var(--fs-500);
+}
+.fs-600{
+    font-size : var(--fs-600);
+}
+
+
+.fw-400{
+    font-weight: 400;
+}
+
+.fw-600{
+    font-weight: 600;
+}
+.fw-700{
+    font-weight: 700 ;
+}
+
+/* Layout  */
+
+.grid{
+    display: grid;
+}
+
+.grid-col-2{
+    grid-template-columns: auto auto;
+}
+.flow > * {
+    margin-bottom: var(--flow-gap, 1rem);
+}
+/* ------------------ */
+/* General   */
+/* ---------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-weight: 300;
+}
+ 
+body {
+    position: relative;
+    background-color: hsl(var(--clr-eggshell));
+    color : hsl(var(--clr-wenge-brown));
+    display: grid;
+    place-content: center;
+    margin: 4rem auto;
+    font-size: var(--fs-300);
+    font-family: var(--ff-outfit);
+}
+
+ul{
+    list-style-type : none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+    unicode-bidi: isolate;
+}
+img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+li > span {
+    font-weight: 700;
+}
+hr{
+    margin-top: 2rem;
+}
+/* ------------------ */
+/*  Components   */
+/* ---------------- */
+
+.recipe-card{
+    position: relative;
+    padding : 2rem;
+    border-radius: 16px;
+    width:700px;
+}
+
+.recipe-img{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 15.625rem;
+    border-radius: 10px;
+}
+
+.preparation{
+    padding : 1.5rem;
+    border-radius: 6px;
+
+}
+
+.preparation li::marker {
+    color : hsl(var(--clr-dark-rasberry));
+}
+
+.ingredients li::marker {
+    color : hsl(var(--clr-nutmeg));
+}
+.instructions li::marker {
+    color : hsl(var(--clr-nutmeg));
+    font-size: 1rem;
+    font-weight: 700;
+}
+div > ul{
+    list-style-type: disc;
+    margin-block : 1em;
+    margin-inline: 1.5em;
+    list-style-position: outside;
+    
+}
+div ul li{
+    position: relative;
+    padding-left: 1em;
+}
+div ul li::marker{
+    font-size: 1em;
+}
+
+
+
+div > ol{
+    margin-block : 1em;
+    margin-inline: 1.5em;
+    list-style-position: outside;
+    
+}
+div ol li{
+    position: relative;
+    padding-left: 1em;
+}
+div ol li::marker{
+    font-size: 1em;
+}
+
+.nutrition div.grid{
+    margin-block: 1rem;
+}
+
+div.grid div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 1px solid hsl(var(--clr-nutmeg));
+    padding : .5rem 2rem;
+}
+
+div.grid div:nth-child(even){
+    font-weight: 700;
+    color : hsl(var(--clr-nutmeg));
+}
+
+
+@media only screen and (max-width : 35em){
+    
+    body{
+        padding : 0;
+        margin : 0;
+    }
+    .recipe-card{
+        position: relative;
+        border-radius: 0;
+        padding : 0;
+        width: 100%;
+    }
+
+    .recipe-img > img{
+        height: 200px;
+        border-radius: 0;
+        background-size: auto;
+        aspect-ratio: 2/5;
+    }
+    .content{
+        padding: 0 2rem;
+    }
+}
+
+@media only screen and (max-width : 45em){
+    
+    body{
+        padding : 0;
+        margin : 0;
+    }
+    .recipe-card{
+        position: relative;
+        border-radius: 0;
+        padding : 0;
+        width: 100%;
+    }
+
+    .recipe-img > img{
+        height: 200px;
+        border-radius: 0;
+        background-size: auto;
+        aspect-ratio: 2/5;
+    }
+    .content{
+        padding: 0 2rem;
+    }
+}
